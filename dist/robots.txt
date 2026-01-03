@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://clubsxai.com/sitemap.xml
