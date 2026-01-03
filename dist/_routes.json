@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "include": [
+    "/_server-islands/*",
+    "/_image",
+    "/admin/*",
+    "/api/*",
+    "/services/premium-portrait-bangkok"
+  ],
+  "exclude": [
+    "/",
+    "/_assets/*",
+    "/.assetsignore",
+    "/bo-photo.png",
+    "/placeholder-logo.png",
+    "/placeholder-logo.svg",
+    "/placeholder-user.jpg",
+    "/placeholder.jpg",
+    "/placeholder.svg",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/images/*",
+    "/404",
+    "/about",
+    "/ai-lab",
+    "/bartender",
+    "/blog/*",
+    "/command-center",
+    "/contact",
+    "/free-tools",
+    "/gallery",
+    "/gear",
+    "/services"
+  ]
+}
