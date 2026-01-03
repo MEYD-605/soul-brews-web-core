@@ -58454,3 +58454,28 @@
 /root/maw-workspace/scripts/lxc-manager.sh: line 117: pct: command not found
 [0;31m❌ [05:25:01][0m Auto-heal failed for LXC 240
 2026-01-04T05:25:01+07:00: Auto-healed LXC 240
+[0;32m[05:30:01][0m Auto-Heal Mode: Checking and restarting failed containers...
+[1;33m⚠️  [05:30:01][0m LXC 100 is down! Attempting restart...
+/root/maw-workspace/scripts/lxc-manager.sh: line 117: pct: command not found
+[0;31m❌ [05:30:01][0m Auto-heal failed for LXC 100
+2026-01-04T05:30:01+07:00: Auto-healed LXC 100
+[1;33m⚠️  [05:30:01][0m LXC 110 is down! Attempting restart...
+/root/maw-workspace/scripts/lxc-manager.sh: line 117: pct: command not found
+[0;31m❌ [05:30:01][0m Auto-heal failed for LXC 110
+2026-01-04T05:30:01+07:00: Auto-healed LXC 110
+[1;33m⚠️  [05:30:01][0m LXC 200 is down! Attempting restart...
+/root/maw-workspace/scripts/lxc-manager.sh: line 117: pct: command not found
+[0;31m❌ [05:30:01][0m Auto-heal failed for LXC 200
+2026-01-04T05:30:01+07:00: Auto-healed LXC 200
+[1;33m⚠️  [05:30:01][0m LXC 220 is down! Attempting restart...
+/root/maw-workspace/scripts/lxc-manager.sh: line 117: pct: command not found
+[0;31m❌ [05:30:01][0m Auto-heal failed for LXC 220
+2026-01-04T05:30:01+07:00: Auto-healed LXC 220
+[1;33m⚠️  [05:30:01][0m LXC 230 is down! Attempting restart...
+/root/maw-workspace/scripts/lxc-manager.sh: line 117: pct: command not found
+[0;31m❌ [05:30:01][0m Auto-heal failed for LXC 230
+2026-01-04T05:30:01+07:00: Auto-healed LXC 230
+[1;33m⚠️  [05:30:01][0m LXC 240 is down! Attempting restart...
+/root/maw-workspace/scripts/lxc-manager.sh: line 117: pct: command not found
+[0;31m❌ [05:30:01][0m Auto-heal failed for LXC 240
+2026-01-04T05:30:01+07:00: Auto-healed LXC 240
