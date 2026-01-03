@@ -233,17 +233,21 @@ class MawOracleAutonomous:
         """Use Alchemist (No.3) to write full blog content"""
         self.log(f"✍️ [Alchemist No.3]: Writing full blog post for '{idea['title']}'...", "INFO")
         
+        # FIXED: Use pubDate (no quotes) and author per Astro Content Collection Schema
         prompt = f"""Write a high-quality blog post in THAI about: {idea['title']}
         Description: {idea.get('description', '')}
         Keywords: {', '.join(idea.get('keywords', []))}
         
-        Format as Markdown with frontmatter:
+        The output MUST be formatted as Markdown with the EXACT frontmatter below:
         ---
         title: "{idea['title']}"
-        date: "{datetime.now().strftime('%Y-%m-%d')}"
+        pubDate: {datetime.now().strftime('%Y-%m-%d')}
         description: "{idea.get('description', '')}"
+        author: "Oracle AI"
         tags: {idea.get('keywords', [])}
         ---
+        
+        IMPORTANT: pubDate MUST NOT have quotes around the date value!
         """
         
         content = self.call_codex(prompt, model="no3")
@@ -273,36 +277,7 @@ class MawOracleAutonomous:
             self.log(f"❌ Git mission failed: {e}", "ERROR")
             return False
 
-    def write_blog_post(self, idea):
-        """Use Alchemist (No.3) to write full blog content"""
-        self.log(f"✍️ [Alchemist No.3]: Writing full blog post for '{idea['title']}'...", "INFO")
-        
-        prompt = f"""Write a high-quality blog post in THAI about: {idea['title']}
-        Description: {idea.get('description', '')}
-        Keywords: {', '.join(idea.get('keywords', []))}
-        
-        Format as Markdown with frontmatter:
-        ---
-        title: "{idea['title']}"
-        date: "{datetime.now().strftime('%Y-%m-%d')}"
-        description: "{idea.get('description', '')}"
-        tags: {idea.get('keywords', [])}
-        ---
-        """
-        
-        content = self.call_codex(prompt, model="no3")
-        
-        if content:
-            # Create slug from title (basic)
-            slug = re.sub(r'[^\w\s-]', '', idea['title'].lower()).replace(' ', '-')
-            filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}.md"
-            blog_path = self.project_root / "src/content/blog" / filename
-            
-            blog_path.parent.mkdir(parents=True, exist_ok=True)
-            blog_path.write_text(content)
-            self.log(f"✅ Blog post manifested: {filename}", "IMPROVE")
-            return blog_path
-        return None
+    # REMOVED: Duplicate write_blog_post function - using the one at line 232
 
     def git_commit_push(self, message):
         """Manifest changes to the Void (Git Push)"""
